@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dr.{{name}}</title>
+<!--mobile apps-->
+<link rel="icon" href="/static/img/img5/coding.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--mobile apps-->
+<!--Custom Theme files-->
+<link href="/static/css/css5/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="/static/css/css5/style.css" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="/static/css/css5/swipebox.css">
+<link rel="stylesheet" href="/static/fonts/fonts/glyphicons-halflings-regular.woff">
+<link rel="stylesheet" href="/static/fonts/fonts/glyphicons-halflings-regular.woff2">
+<!--//Custom Theme files-->
+<!--js-->
+<script src="/static/js/js5/jquery-1.11.1.min.js"></script> 
+<!-- //js -->
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=Overlock:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+<!--start-smooth-scrolling-->
+<script type="text/javascript" src="/static/js/js5/move-top.js"></script>
+<script type="text/javascript" src="/static/js/js5/easing.js"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smooth-scrolling-->
+</head>
+<body>
+	<!--banner-->
+	<div id="home" class="banner">
+		<div class="banner-info">
+			<div class="container">
+				<div class="col-md-4 header-left">
+					<img src="/static/faculty/{{file}}" alt=""/>
+				</div>
+				<div class="col-md-8 header-right">
+					<h2>Hello</h2>
+					<h1>I am {{name}}
+					<h6><b>Assistant Professor and Researcher</b></h6>
+					<ul class="address">
+						<li>
+							<ul class="address-text">
+								<li><b>PHONE </b></li>
+								<li><b>{{phone}}</b></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>ADDRESS </b></li>
+								<li><b>{{addr}}</b></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>E-MAIL </b></li>
+								<li><b><a href="mailto:{{email}}"> {{email}}</a></b></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>WEBSITE </b></li>
+								<li><b><a href="#">www.{{name}}.com</a></b></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//banner-->
+	<!--top-nav-->
+	<div class="top-nav wow">
+		<div class="container">
+			<div class="navbar-header logo">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					Menu
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="menu">
+					<ul class="nav navbar">
+						<li><a href="#about" class="scroll">About</a></li>
+						<li><a href="#work" class="scroll">Experience</a></li>
+						<li><a href="#education" class="scroll">Education</a></li>
+						<li><a href="#skills" class="scroll">Teaching</a></li>
+						<li><a href="#projects" class="scroll">My Publications</a></li>
+						<li><a href="#contact" class="scroll">Contact</a></li>
+					</ul>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!--//top-nav-->
+	<!--about-->
+	<div id="about" class="about">
+		<div class="container">
+			<h3 class="title">About Me</h3>
+			<div class="col-md-8 about-left">	<h4><u>A short bio -</u></h4><br>
+				<p style="color: black" >{{bio}}</p><br>
+			</div>
+			<div class="col-md-4 about-right">
+				<ul>
+					<h5>Research Interests</h5>
+					{%for int in interests%}
+					<li><span><img src="../static/img/img/business-and-finance.png" alt="" /></span> {{int}} </li>
+					{%endfor%}	
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//about-->
+	<!--work-experience-->
+	<div id="work" class="work">
+		<div class="container">
+			<h3 class="title">Work Experience</h3>
+			{%for i in range(lenwork)%}
+			<div class="work-info"> 
+				<div class="col-md-6 work-left"> 
+					<h4>{{work[i*2]}}</h4>
+				</div>
+				<div class="col-md-6 work-right"> 
+					<h5><span class="glyphicon"><span><img src="../static/img/img/business.png" alt="" /></span></span>{{work[i*2 + 1]}}</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			{%endfor%}
+		</div>
+	</div>
+	<!--//work-experience-->
+	<!--education-->
+	<div id="education" class="education">
+		<div class="container">
+			<h3 class="title">Education</h3>
+
+			{%for i in range(lenedu)%}
+			<div class="work-info"> 
+				<div class="col-md-6 work-left"> 
+					<h4>{{edu[i*2]}}</h4>
+				</div>
+				<div class="col-md-6 work-right"> 
+					<h5><span class="glyphicon"><span><img src="../static/img/img/computing.png" alt="" /></span></span> {{edu[i*2+1]}}</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			{%endfor%}
+		</div>
+	</div>
+	<!--//education-->
+	<!--skills-->
+	<div id="skills" class="skills">
+		<div class="container">
+			<h3 class="title">Teaching</h3>
+			<div class="skills-info">
+				<div class="col-md-12 bar-grids">
+					<center>
+					{%for i in range(lenteach)%}
+					<h6>{{teaching[i]}}</h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 100%">
+						</div>
+					</div>
+					{%endfor%}
+				</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//education-->
+	<!--portfolio-->
+	<div id="projects" class="portfolio">
+		<div class="container">
+			<h3 class="title wow zoomInLeft animated" data-wow-delay=".5s">My Publications</h3>
+			<!-- <div class="sap_tabs">			
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">	
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content">
+							<div class="tab_img" style="margin-left: 15px;"> -->
+								<ul>
+									{%for i in range(lenpub)%}
+										<li>{{pub[i]}}</li>
+									{%endfor%}
+							</ul>
+							<!-- </div> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				</div>
+			</div>
+			<!--ResponsiveTabs-->
+			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					$('#horizontalTab').easyResponsiveTabs({
+						type: 'default', //Types: default, vertical, accordion           
+						width: 'auto', //auto or any width like 600px
+						fit: true   // 100% fit in a container
+					});
+				});		
+			</script>
+			<!--//ResponsiveTabs-->
+			<!-- swipe box js -->
+			<script src="js/jquery.swipebox.min.js"></script> 
+				<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+			</script>
+			<!-- //swipe box js -->
+		</div>
+	</div>
+	<!--//portfolio-->
+	<!--contact -->
+	<div class="welcome contact" id="contact">
+		<div class="container">
+			<h3 class="title">Contact Me</h3>
+			<div class="contact-row">
+				<div class="col-md-12">
+					<center>
+					<div class="address-left">
+						<p>{{addr}}<br> IIITDM Kancheepuram,Chennai </p>
+					</div>
+					<div class="address-right">
+						<p>Call me :  {{phone}}</p>
+						<p>E-mail : <a href="mailto:{{email}}">{{email}}</a></p>
+					</div>
+					</center>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					<!--================ Start Recent Event Area =================-->
+					
+					<div id="map">
+						<div id="wrapper">
+							<script>
+								function changeAirport(){
+									document.getElementById("airport").style.display = "block";
+									document.getElementById("cc").style.display = "none";
+									document.getElementById("cmbt").style.display = "none";
+									document.getElementById("tambaram").style.display = "none";
+									
+									document.getElementById("airportH").style.color = "#999";
+									document.getElementById("ccH").style.color = "#edeaea";
+									document.getElementById("cmbtH").style.color = "#edeaea";
+									document.getElementById("tambaramH").style.color = "#edeaea";
+								}
+								
+								function changeCC(){
+									document.getElementById("airport").style.display = "none";
+									document.getElementById("cc").style.display = "block";
+									document.getElementById("cmbt").style.display = "none";
+									document.getElementById("tambaram").style.display = "none";
+									
+									document.getElementById("airportH").style.color = "#edeaea";
+									document.getElementById("ccH").style.color = "#999";
+									document.getElementById("cmbtH").style.color = "#edeaea";
+									document.getElementById("tambaramH").style.color = "#edeaea";
+								}
+								
+								function changeCMBT(){
+									document.getElementById("airport").style.display = "none";
+									document.getElementById("cc").style.display = "none";
+									document.getElementById("cmbt").style.display = "block";
+									document.getElementById("tambaram").style.display = "none";
+									
+									document.getElementById("airportH").style.color = "#edeaea";
+									document.getElementById("ccH").style.color = "#edeaea";
+									document.getElementById("cmbtH").style.color = "#999";
+									document.getElementById("tambaramH").style.color = "#edeaea";
+								}
+								
+								function changeTambaram(){
+									document.getElementById("airport").style.display = "none";
+									document.getElementById("cc").style.display = "none";
+									document.getElementById("cmbt").style.display = "none";
+									document.getElementById("tambaram").style.display = "block";
+									
+									document.getElementById("airportH").style.color = "#edeaea";
+									document.getElementById("ccH").style.color = "#edeaea";
+									document.getElementById("cmbtH").style.color = "#edeaea";
+									document.getElementById("tambaramH").style.color = "#999";
+								}
+								
+							</script>
+				
+							<div  class="container-fluid" align="center"  id="airport" style="background-color: black;">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124443.39854200113!2d80.05072759712793!3d12.916962147653926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a525e1f5da86397%3A0x21092f216ee26e47!2sChennai+International+Airport%2C+Meenambakkam%2C+Chennai%2C+Tamil+Nadu!3m2!1d12.994112!2d80.1708668!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485858036904" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+							</div>
+							
+							
+							<div style="width: 100%; margin: 30px; display: none" align="center" id="cc">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248842.85426063463!2d80.03872431333522!3d12.960997124988872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a5268aaafd23aa1%3A0x72b9a0dee209a729!2sCentral+Railway+Station%2C+Park+Town%2C+Chennai%2C+Tamil+Nadu!3m2!1d13.081847999999999!2d80.277394!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485860559431" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								
+								
+							</div>
+							
+							<div style="width: 100%; margin: 30px; display: none" align="center" id="cmbt">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248845.9008546991!2d80.00143651321231!3d12.95794888728057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a5266bcc0e677fb%3A0xba2722566219b08c!2sCMBT%2C+CMBT+Passenger+Way%2C+Koyambedu%2C+Chennai%2C+Tamil+Nadu!3m2!1d13.067470799999999!2d80.2056236!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485860647374" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								
+							</div>
+							
+							<div style="width: 100%; margin: 30px; display: none" align="center" id="tambaram">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d62230.13211885355!2d80.07139726564426!3d12.883059645923172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a525f6d07dad611%3A0x60fc7f42a6e81303!2sTambaram+Railway+Station%2C+Tambaram+Railway+Bridge%2C+East+Tambaram%2C+Chennai%2C+Tamil+Nadu!3m2!1d12.9259177!2d80.1181198!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485860758207" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								
+							</div>
+						
+					</div>
+				<script type="text/javascript">
+				function googleTranslateElementInit() {
+					new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'hi', layout: 	google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+				}
+				</script>
+				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+					
+					<script src="/static/js/js5/jquery.min.js"></script>
+					<script src="/static/js/js5/jquery.scrollex.min.js"></script>
+					<script src="/static/js/js5/jquery.scrolly.min.js"></script>
+					<script src="/static/js/js5/skel.min.js"></script>
+					<script src="/static/js/js5/util.js"></script>
+					<script src="/static/js/js5/main.js"></script>
+					
+					<script>
+				function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+				x.className += " responsive";
+				} else {
+				x.className = "topnav";
+				}
+				}
+				</script>
+				
+					<!--================ End Recent Event Area =================-->
+	<!--//contact -->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<p>© 2020 All rights reserved | Design by Yoga Sri Varshan V</p>
+		</div>
+	</div>
+	<!--//footer-->
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/js5/bootstrap.js"></script>
+</body>
+</html>

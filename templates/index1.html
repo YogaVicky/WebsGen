@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Faculty form</h2>
+  <form class="form-horizontal" action="/faculty" method = "POST">
+    <div class="form-group">
+      		<label class="control-label col-sm-2" for="name"></label>
+      	<div class="col-sm-10">
+        		<input type="text" class="form-control" id="email" placeholder="Enter name" name="name">
+      	</div>
+	</div>
+	<div class="form-group">
+				<label class="control-label col-sm-2" for="Phone Number"></label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="Phone Number" placeholder="Enter Phone Number" name="Phone Number">
+			</div>
+	  </div>
+	  <div class="form-group">
+				<label class="control-label col-sm-2" for="address"></label>
+			<div class="col-sm-10">
+		  		<input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
+			</div>
+	  </div>
+	  <div class="form-group">
+				<label class="control-label col-sm-2" for="email"></label>
+			<div class="col-sm-10">
+			  	<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+			</div>
+	  </div>
+	  <div class="form-group">
+				<label class="control-label col-sm-2" for="A short bio"></label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="bio" placeholder="Enter a short bio" name="bio">
+			</div>
+	  </div>
+	  <h3>Professional Sevice</h3>
+	  <div class="form-group">
+		  		<h2>How many services do u do?</h2>
+				<label class="control-label col-sm-2" for="Number of pro services"></label>
+			<div class="col-sm-10">
+				  <input type="number" class="form-control" id="services" placeholder="Enter your proffesional services" name="service" onchange="prospace()">
+			</div>
+	  </div>
+	  <div id="hiddenpro">
+
+	  </div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="Reasearch Intrests"></label>
+			<div class="col-sm-10">
+		  		<input type="text" class="form-control" id="intrests" placeholder="Enter your reasearch intrests" name="intrests">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="Work expeience"></label>
+			<div class="col-sm-10">
+		  		<input type="text" class="form-control" id="work" placeholder="Enter your work expeience" name="work">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="Education"></label>
+			<div class="col-sm-10">
+		  		<input type="text" class="form-control" id="edu" placeholder="Enter your educational details" name="edu">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="Teaching"></label>
+			<div class="col-sm-10">
+		  		<input type="text" class="form-control" id="teaching" placeholder="Enter your teaching expeience" name="teaching">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="Publications"></label>
+			<div class="col-sm-10">
+		  		<input type="text" class="form-control" id="publications" placeholder="Enter your publications" name="publications">
+			</div>
+		</div>
+		
+	</div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+<script>
+	function prospace(){
+		var n = document.getElementById("services").value;
+		console.log(n);
+		var str = '';
+		var add1 = '<div class="form-group"><label class="control-label col-sm-2" for="Professional service';
+		var add2 = '"></label><div class="col-sm-10"><input type="text" class="form-control" id="services" placeholder="Enter your proffesional services';
+		var add3 = '" name="service';
+		var add4 = '></div></div>';
+		for(var i=0;i<n;i++){
+			str+=add1+i+add2+i+add3+i+add4;
+		}
+		console.log(str);
+		document.getElementById("hiddenpro").innerHTML = str;
+	}	
+</script>
+</html>
