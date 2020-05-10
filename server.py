@@ -3,11 +3,7 @@ import os
 from werkzeug import secure_filename
 from pymysql import connect
 
-UPLOAD_FOLDER = '/static/faculty'
-
 app = Flask(__name__)
-
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def dbconnect(sql):
     result = []
