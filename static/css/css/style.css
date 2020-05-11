@@ -5,6 +5,22 @@
   background-image: linear-gradient(to left, #fff 0%, #fff 51%, #fff 100%);
 }
 
+.sub-title {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: 12px;
+	font-weight: 700;
+	color: #4285f4;
+	margin-bottom: 10px; }
+	
+.text-black {
+	color: #000 !important; }
+		
+.ho {
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+}
+
 /**************** extend css start ****************/
 /**************** common css start ****************/
 /* line 3, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_common.scss */
@@ -905,11 +921,15 @@ ul {
   font-weight: 300;
 }
 
+.our-team {
+	padding: 2% 2% 2% 2%;;
+}
+
 /* line 70, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
 .single-blog .tag {
   text-align: left;
   display: inline-block;
-  float: left;
+  /* float: left; */
   font-size: 13px;
   font-weight: 300;
   margin-right: 22px;
@@ -3342,8 +3362,8 @@ ul {
 
 /* line 33, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_use_sasu.scss */
 .use_sasu .single_feature_part img {
-  margin-bottom: 33px;
-  height: 65px;
+  width: 500px;
+  height: 350px;
 }
 
 @media (max-width: 991px) {

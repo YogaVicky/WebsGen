@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import os
-from werkzeug import secure_filename
+#from werkzeug import secure_filename
 from pymysql import connect
 
 app = Flask(__name__)
@@ -30,8 +30,8 @@ def faculty():
     if request.method == 'POST':
         res = request.form
         image = request.files['pic']
-        file = secure_filename(image.filename)
-        image.save(os.path.join(app.root_path, 'static/faculty/' + file))
+        file = ''
+        # image.save(os.path.join(app.root_path, 'static/faculty/' + file))
         print(res)
         name = res['name']
         phone = res['phone']
