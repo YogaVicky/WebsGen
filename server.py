@@ -66,11 +66,10 @@ def faculty():
 
 @app.route('/clients')
 def clients():
-    # sql = "select * from monday"
-    # res = dbconnect(sql)
-    # print(res)
-    # return str(res)
-    return render_template('client.html')
+    sql = "select * from faculty"
+    res = dbconnect(sql)
+    print(res)
+    return render_template('client.html',res=res)
 
 @app.route('/contact')
 def contact():
