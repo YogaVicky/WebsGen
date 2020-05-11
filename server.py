@@ -34,6 +34,8 @@ def faculty():
         # image.save(os.path.join(app.root_path, 'static/faculty/' + file))
         print(res)
         name = res['name']
+        designation = res['designation']
+        college = res['college']
         phone = res['phone']
         addr = res['address']
         email = res['email']
@@ -60,7 +62,7 @@ def faculty():
         lenedu = int((len(edu))/2)
         lenteach = int((len(teaching)))
         lenpub = int((len(pub)))
-    return render_template('jk.html',name = name,phone = phone,addr = addr,email=email,bio = bio,interests = interests,work = work,edu = edu,teaching = teaching,pub = pub,file = file,lenwork = lenwork,lenedu = lenedu,lenteach = lenteach,lenpub = lenpub)
+    return render_template('jk.html',name = name,phone = phone,addr = addr,email=email,bio = bio,interests = interests,work = work,edu = edu,teaching = teaching,pub = pub,file = file,lenwork = lenwork,lenedu = lenedu,lenteach = lenteach,lenpub = lenpub,designation = designation,college = college)
 
 @app.route('/clients')
 def clients():
