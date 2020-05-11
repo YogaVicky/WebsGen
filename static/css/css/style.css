@@ -925,6 +925,10 @@ ul {
 	padding: 2% 2% 2% 2%;;
 }
 
+.tmp {
+	padding-left: 45%;
+}
+
 /* line 70, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
 .single-blog .tag {
   text-align: left;
