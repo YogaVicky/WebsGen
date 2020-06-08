@@ -5,6 +5,17 @@
   background-image: linear-gradient(to left, #fff 0%, #fff 51%, #fff 100%);
 }
 
+
+.templates {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.checkbox {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
 /**************** extend css start ****************/
 /**************** common css start ****************/
 /* line 3, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_common.scss */
