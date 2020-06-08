@@ -197,6 +197,87 @@
       />
     </section>
 
+<div id="map">
+						<div id="wrapper">
+							<script>
+								function changeAirport(){
+									document.getElementById("airport").style.display = "block";
+									document.getElementById("cc").style.display = "none";
+									document.getElementById("cmbt").style.display = "none";
+									document.getElementById("tambaram").style.display = "none";
+									
+									document.getElementById("airportH").style.color = "#999";
+									document.getElementById("ccH").style.color = "#edeaea";
+									document.getElementById("cmbtH").style.color = "#edeaea";
+									document.getElementById("tambaramH").style.color = "#edeaea";
+								}
+								
+								function changeCC(){
+									document.getElementById("airport").style.display = "none";
+									document.getElementById("cc").style.display = "block";
+									document.getElementById("cmbt").style.display = "none";
+									document.getElementById("tambaram").style.display = "none";
+									
+									document.getElementById("airportH").style.color = "#edeaea";
+									document.getElementById("ccH").style.color = "#999";
+									document.getElementById("cmbtH").style.color = "#edeaea";
+									document.getElementById("tambaramH").style.color = "#edeaea";
+								}
+								
+								function changeCMBT(){
+									document.getElementById("airport").style.display = "none";
+									document.getElementById("cc").style.display = "none";
+									document.getElementById("cmbt").style.display = "block";
+									document.getElementById("tambaram").style.display = "none";
+									
+									document.getElementById("airportH").style.color = "#edeaea";
+									document.getElementById("ccH").style.color = "#edeaea";
+									document.getElementById("cmbtH").style.color = "#999";
+									document.getElementById("tambaramH").style.color = "#edeaea";
+								}
+								
+								function changeTambaram(){
+									document.getElementById("airport").style.display = "none";
+									document.getElementById("cc").style.display = "none";
+									document.getElementById("cmbt").style.display = "none";
+									document.getElementById("tambaram").style.display = "block";
+									
+									document.getElementById("airportH").style.color = "#edeaea";
+									document.getElementById("ccH").style.color = "#edeaea";
+									document.getElementById("cmbtH").style.color = "#edeaea";
+									document.getElementById("tambaramH").style.color = "#999";
+								}
+								
+							</script>
+				
+							<div  class="container-fluid" align="center"  id="airport" style="background-color: white;">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d124443.39854200113!2d80.05072759712793!3d12.916962147653926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a525e1f5da86397%3A0x21092f216ee26e47!2sChennai+International+Airport%2C+Meenambakkam%2C+Chennai%2C+Tamil+Nadu!3m2!1d12.994112!2d80.1708668!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485858036904" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+							</div>
+							
+							
+							<div style="width: 100%; margin: 30px; display: none" align="center" id="cc">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248842.85426063463!2d80.03872431333522!3d12.960997124988872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a5268aaafd23aa1%3A0x72b9a0dee209a729!2sCentral+Railway+Station%2C+Park+Town%2C+Chennai%2C+Tamil+Nadu!3m2!1d13.081847999999999!2d80.277394!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485860559431" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								
+								
+							</div>
+							
+							<div style="width: 100%; margin: 30px; display: none" align="center" id="cmbt">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d248845.9008546991!2d80.00143651321231!3d12.95794888728057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a5266bcc0e677fb%3A0xba2722566219b08c!2sCMBT%2C+CMBT+Passenger+Way%2C+Koyambedu%2C+Chennai%2C+Tamil+Nadu!3m2!1d13.067470799999999!2d80.2056236!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485860647374" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								
+							</div>
+							
+							<div style="width: 100%; margin: 30px; display: none" align="center" id="tambaram">
+								
+								<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d62230.13211885355!2d80.07139726564426!3d12.883059645923172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a525f6d07dad611%3A0x60fc7f42a6e81303!2sTambaram+Railway+Station%2C+Tambaram+Railway+Bridge%2C+East+Tambaram%2C+Chennai%2C+Tamil+Nadu!3m2!1d12.9259177!2d80.1181198!4m5!1s0x3a525851fbcd3b6b%3A0x9f1067aa71e3898e!2sIIITDM+Kancheepuram%2C+Melakottaiyur+Village%2C+Off+Vandalur-Kelambakkam+Road%2C+Nellikuppam%2C+Chennai%2C%2C+Vengadamangalam%2C+Tamil+Nadu+600127!3m2!1d12.839496299999999!2d80.1374898!5e0!3m2!1sen!2sin!4v1485860758207" width="80%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								
+							</div>
+						
+					</div>
+
     <!--::footer_part start::-->
     <footer class="footer_part">
       <div class="container">
