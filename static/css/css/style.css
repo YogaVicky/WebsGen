@@ -5,6 +5,25 @@
   background-image: linear-gradient(to left, #fff 0%, #fff 51%, #fff 100%);
 }
 
+.mobileHide { display: inline; }
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){
+     .mobileHide { display: none;}
+  }
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
+
 @media screen and (max-width: 600px) {
 	#title_message {
 	  visibility: hidden;
