@@ -5,6 +5,17 @@
   background-image: linear-gradient(to left, #fff 0%, #fff 51%, #fff 100%);
 }
 
+@media screen and (max-width: 600px) {
+	#title_message {
+	  visibility: hidden;
+	  clear: both;
+	  float: left;
+	  margin: 10px auto 5px 20px;
+	  width: 28%;
+	  display: none;
+	}
+  }
+
 .sub-title {
 	display: block;
 	text-transform: uppercase;
@@ -2662,9 +2673,16 @@ ul {
 
 /* line 325, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
 .menu_fixed .main-menu-item ul li .nav-link {
-  color: #fff !important;
+  color: black !important;
 }
 
+/* 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.menu_fixed .main-menu-item ul li .nav-link {
+		color: black !important;
+	  }  
+	
+} */
 /* line 330, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_menu.scss */
 .menu_fixed .main_logo {
   display: block;
