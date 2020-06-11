@@ -34,6 +34,13 @@ def faculty():
         file = image.filename
         image.save(os.path.join(app.root_path, 'static/faculty/' + file))
         print(res)
+        temp = 0
+        try:
+            print(res['optradio1'])
+            temp = 1
+        except:
+            temp = 2
+        print(temp)    
         name = res['name']
         designation = res['designation']
         college = res['collge']
@@ -69,7 +76,10 @@ def faculty():
         idf = res[0][0] + 1
         sql = "insert into faculty(id,name,designation,college,picture) values({0},'{1}','{2}','{3}','{4}')".format(idf,name, designation, college,file)
         res = dbconnect(sql)
-    return render_template('jk.html',name = name,phone = phone,addr = addr,email=email,bio = bio,interests = interests,work = work,edu = edu,teaching = teaching,pub = pub,file = file,lenwork = lenwork,lenedu = lenedu,lenteach = lenteach,lenpub = lenpub,designation = designation,college = college)
+    if temp == 1:
+        return render_template('jk.html',name = name,phone = phone,addr = addr,email=email,bio = bio,interests = interests,work = work,edu = edu,teaching = teaching,pub = pub,file = file,lenwork = lenwork,lenedu = lenedu,lenteach = lenteach,lenpub = lenpub,designation = designation,college = college)
+    else:
+        return render_template('jk2.html',name = name,phone = phone,addr = addr,email=email,bio = bio,interests = interests,work = work,edu = edu,teaching = teaching,pub = pub,file = file,lenwork = lenwork,lenedu = lenedu,lenteach = lenteach,lenpub = lenpub,designation = designation,college = college)
 
 @app.route('/clients')
 def clients():
@@ -83,4 +93,4 @@ def contact():
     return render_template('team.html')
 
 if __name__ == '__main__':
-    app.run('0.0.0.0',debug = True,port=3000)
+    app.run('0.0.0.0',debug = True)

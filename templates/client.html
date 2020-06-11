@@ -151,22 +151,24 @@
 	  </div> -->
 
 	  <div class="mobileShow">
+		{%for rec in res%}
 		<div class="container align-items-center">
 			<div class="col">
 				<div class="row">
-					<img src="../static/img/img/jktmp.png" alt="">
+					<img src="../static/faculty/{{rec[4]}}" alt="">
 				</div>
 				<div class="row">
 					<div class="client-padd">
 						<p>
-							Name : Jagadeesh Kakarla <br>
-							Designation : Assistant Proffesor <br>
-							Present Working at : IIITDM Kancheepuram, Chennai.
+							Name : {{rec[1]}} <br>
+							Designation : {{rec[2]}} <br>
+							Present Working at : {{rec[3]}}<br>
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
+		{%endfor%}
 	  </div>
 	  <div class="mobileHide">
 		{%for rec in res%}
