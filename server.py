@@ -30,12 +30,13 @@ def faculty():
     if request.method == 'POST':
         res = request.form
         image = request.files['pic']
-        file = ''
-        # image.save(os.path.join(app.root_path, 'static/faculty/' + file))
+        print(image.filename)
+        file = image.filename
+        image.save(os.path.join(app.root_path, 'static/faculty/' + file))
         print(res)
         name = res['name']
         designation = res['designation']
-        college = res['college']
+        college = res['collge']
         phone = res['phone']
         addr = res['address']
         email = res['email']
@@ -45,8 +46,9 @@ def faculty():
         edu = res['edu'].split(',')
         teaching = res['teaching'].split(',')
         pub = res['publications'].split('|')
-
         print(name)
+        print(designation)
+        print(college)
         print(phone)
         print(addr)
         print(email)
@@ -57,11 +59,16 @@ def faculty():
         print(teaching)
         print(pub)
         print(file)
-
         lenwork  = int((len(work))/2)
         lenedu = int((len(edu))/2)
         lenteach = int((len(teaching)))
         lenpub = int((len(pub)))
+        sql = "select count(id) from faculty"
+        res = dbconnect(sql)
+        print(res)
+        idf = res[0][0] + 1
+        sql = "insert into faculty(id,name,designation,college,picture) values({0},'{1}','{2}','{3}','{4}')".format(idf,name, designation, college,file)
+        res = dbconnect(sql)
     return render_template('jk.html',name = name,phone = phone,addr = addr,email=email,bio = bio,interests = interests,work = work,edu = edu,teaching = teaching,pub = pub,file = file,lenwork = lenwork,lenedu = lenedu,lenteach = lenteach,lenpub = lenpub,designation = designation,college = college)
 
 @app.route('/clients')
