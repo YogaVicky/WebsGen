@@ -150,46 +150,48 @@
         </div>
 	  </div> -->
 
-	  <div class="mobileShow">
-		{%for rec in res%}
-		<div class="container align-items-center">
-			<div class="col">
-				<div class="row">
-					<img src="../static/faculty/{{rec[4]}}" alt="">
-				</div>
-				<div class="row">
-					<div class="client-padd">
-						<p>
-							Name : {{rec[1]}} <br>
-							Designation : {{rec[2]}} <br>
-							Present Working at : {{rec[3]}}<br>
-						</p>
+		<div class="mobileShow">
+			{%for rec in res%}
+			<div class="container align-items-center">
+				<div class="col">
+					<div class="row">
+						<img src="../static/faculty/{{rec[4]}}" alt="">
+					</div>
+					<div class="row">
+						<div class="client-padd">
+							<p>
+								<div style="font-size: large; padding-bottom: 5%;">
+									Name : {{rec[1]}} <br>
+									Designation : {{rec[2]}} <br>
+									Present Working at : {{rec[3]}}<br>
+								</div>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
+			{%endfor%}
 		</div>
-		{%endfor%}
-	  </div>
-	  <div class="mobileHide">
-		{%for rec in res%}
-		<div class="container align-items-center" style="padding: 1% 1% 1% 1%;">
-			<div class="row">
-				<div class="col-md-4">
-					<img src="../static/faculty/{{rec[4]}}"  alt="">
-				</div>
-				<div class="col-md-4">
-					<div class="client-padd">
-						<p>
-							Name : {{rec[1]}} <br>
-							Designation : {{rec[2]}} <br>
-							Present Working at : {{rec[3]}}<br>
-						</p>
+		<div class="mobileHide">
+			{%for rec in res%}
+			<div class="container align-items-center" style="padding: 1% 1% 1% 1%;">
+				<div class="row">
+					<div class="col-md-4">
+						<img src="../static/faculty/{{rec[4]}}" alt="">
+					</div>
+					<div class="col-md-4">
+						<div class="client-padd">
+							<p style="font-size: x-large;">
+								Name : {{rec[1]}} <br>
+								Designation : {{rec[2]}} <br>
+								Present Working at : {{rec[3]}}<br>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
+			{%endfor%}
 		</div>
-		{%endfor%}
-	  </div>
 		<div class="container align-items-center">
 		</div>
 		<img src="../static/img/img/animate_icon/Ellipse_1.png" alt="" class="feature_icon_1 custom-animation1" />
